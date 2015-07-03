@@ -1,0 +1,7 @@
+CREATE TABLE `cervejas`.`new_table` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `marca` VARCHAR(900) NOT NULL,
+  `ml` INT NOT NULL,
+  `valor` DOUBLE NOT NULL,
+  PRIMARY KEY (`id`));
+ 
