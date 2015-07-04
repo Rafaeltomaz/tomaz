@@ -1,13 +1,80 @@
-<?php
-include('inc/common.php');
-$con = newDbConnection();
-$sql = $con->prepare('INSERT INTO user (name, email, password, active) VALUES (?,?,?,?)');
-$name = $_POST['name'];
-$email = $_POST['email'];
-$password = sha1($_POST['password']);
-$active = 1;
-$sql->bind_param('sssi', $name, $email, $password, $active);
-if (!$sql->execute()) {
-    dd($sql->error);
-}
-header('location:index.php?p=user-form&success=1');
+ <html>
+     <head>
+         <title>Projeto Final</title>
+         <meta charset="ISO-8859-1">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
+         <link href="css/bootstrap-theme.css" rel="stylesheet" type="text/css"/>
+         <script src="js/jquery-1.11.3.js" type="text/javascript"></script>
+         <script src="js/bootstrap.js" type="text/javascript"></script>        
+     </head>
+     <body>
+        
+         <div class="container"
+              <head>
+         
+         </head>
+         <div align="center" class="col-lg-5" style="margin: 10px">
+             
+          
+             <div class="row" style="background-color: #FFF9F9" align="center">
+                 <h2>Carrinho de Compras</h2>
+                 <br>
+                 <ul>
+                     <a><li><h4>Produto 1</h4></li></a>
+                     <br>
+                     <a><li><h4>Produto 2</h4></li></a>
+                     <br>
+                     <a><li><h4>Produto 3</h4></li></a>
+                     <br>
+                     <a><li><h4>Produto 4</h4></li></a>
+                     <br>
+                     <a><li><h4>Produto 5</h4></li></a>
+                 </ul>
+             </div>
+         </div>
+         <div class="col-md-6"  style="margin: 15px">
+             
+                 <ul><h3 style="font-family: inherit; color: red"><b>CERVEJAS</b></h3></ul>
+                 <ul>
+                     <li><h4>SKOL</h4>
+                      
+                         <img src="img/skol.jpg" height="300">
+                         <button type="button" id="compra1" class="btn btn-danger">Comprar</button> 
+                         <h5>ESTA CERVEJA DESCE REDONDA</h5>
+                     </li>
+                     <li><h4>HEINENKEN</h4>
+                      
+                         <img src="img/Heinenken.jpg" height="200">
+                         <button type="button" id="compra1" class="btn btn-danger">Comprar</button> 
+                         <h5>NAO PRESCISA ESTAR MORTO PARA IR PARA O CEU, BEBA HEINENKEN</h5>
+                     </li>
+                     <li><h4>ANTATICA</h4>
+                      
+                         <img src="img/Antatica.jpg" height="300">
+                         <button type="button" id="compra1" class="btn btn-danger">Comprar</button> 
+                         <h5>ANTATICA, SEM CORAPACEES</h5>
+                     </li>
+                     <li><h4>ORIGINAL</h4>
+                         <img src="img/original.jpg" height="300">
+                         <button type="button" id="compra2" class="btn btn-danger">Comprar</button>
+                         <h5>NAO BEBA COPIAS, BEBA SEMPRE A ORIGNAL</h5>
+                     </li>
+                     <li><h4>POLAR</h4>
+                         <img src="img/polar.jpg" height="300">
+                         <button type="button" id="compra3" class="btn btn-danger">Comprar</button>
+                         <h5>POLAR A MELHOR E DAQUI</h5>    
+                     </li>
+                 </ul>
+             </div>
+         </div>
+     </div>
+     <div class="container">
+         <div class="row" align="center" style="color: red">
+             <h3>SE BEBER
+                 <br> 
+           NAO CAIA</h3>
+         </div>
+     </div>
+ </body>
+ </html>
