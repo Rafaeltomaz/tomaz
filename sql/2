@@ -5,3 +5,5 @@ CREATE TABLE `cervejas`.`new_table` (
   `valor` DOUBLE NOT NULL,
   PRIMARY KEY (`id`));
  
+ALTER TABLE `cervejas`.`cervejas` 
+CHANGE COLUMN `id` `id` INT(11) NOT NULL AUTO_INCREMENT ;
